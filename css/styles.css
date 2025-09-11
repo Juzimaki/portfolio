@@ -1,0 +1,243 @@
+/* Import modern font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+/* General Page Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Always keep Daniel Zamora in Papyrus */
+header h1 {
+  font-family: Papyrus, fantasy;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 20px 0;
+  color: #000;
+}
+
+/* Gallery subheadings (Boiler Room, Conway etc.) */
+.gallery h2 {
+  font-family: "Lucida Console", monospace;
+  color: #000;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Navigation Bar */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+  font-family: "Inter", sans-serif;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none !important;
+  font-weight: 600;
+  color: #333;
+  padding: 8px 12px;
+  transition: all 0.25s ease;
+  border: none;
+  border-radius: 4px;
+}
+
+nav ul li a:hover {
+  color: #000;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  padding: 8px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  min-width: 180px;
+  z-index: 1000;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 8px 16px;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  text-decoration: none !important;
+}
+
+.dropdown-menu li a:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: #000;
+  text-decoration: none !important;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Remove default dropdown arrow */
+nav ul li.dropdown > a::after {
+  content: none;
+}
+
+/* Push page content down so nav doesn't cover */
+body.homepage,
+body.gallery-page {
+  margin-top: 80px;
+}
+
+/* Polaroid Wall */
+.wall {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+/* Polaroid Cards */
+.polaroid {
+  width: 330px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transform: rotate(0);
+  transition: transform 0.28s, box-shadow 0.28s;
+}
+
+.polaroid:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 14px 18px 30px rgba(0, 0, 0, 0.32);
+}
+
+.polaroid figure {
+  background: white;
+  border: 1px solid #eee;
+  padding: 18px 18px 27px;
+  border-radius: 6px;
+  box-shadow: 8px 12px 24px rgba(0, 0, 0, 0.18);
+  text-align: center;
+  font-family: Papyrus, fantasy;
+}
+
+.polaroid img {
+  display: block;
+  width: 100%;
+  height: 255px;
+  object-fit: cover;
+  border-radius: 3px;
+  margin-bottom: 8px;
+}
+
+.polaroid figcaption {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Gallery Pages */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.gallery-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.gallery-images img {
+  width: 330px;
+  height: 255px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 8px 12px 24px rgba(0, 0, 0, 0.18);
+}
+
+/* Video centered under images */
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.video-container video {
+  width: 800px;
+  max-width: 100%;
+  border-radius: 6px;
+  box-shadow: 8px 12px 24px rgba(0, 0, 0, 0.18);
+}
+/* --- ENSURE DANIEL ZAMORA is ALWAYS Papyrus --- */
+body header:first-of-type h1 {
+  font-family: Papyrus, fantasy;
+  font-size: 2.5rem;
+  margin: 20px 0;
+  color: #000;
+}
+
+/* PRIMARY: project titles */
+.project-title {
+  font-family: "Courier New", Courier, monospace;
+  color: #000;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+}
+
+/* FALLBACKS for different HTML structures */
+body.gallery-page header:nth-of-type(2) h1,
+body.gallery-page header:nth-of-type(2) h2,
+body.gallery-page .gallery > h2,
+body.gallery-page .gallery > h1 {
+  font-family: "Courier New", Courier, monospace;
+  color: #000;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+/* Make "Daniel Zamora" link back home but keep same look */
+.site-title {
+  text-decoration: none; /* removes underline */
+  color: inherit; /* keeps the same color */
+  font-family: Papyrus, fantasy; /* same font as before */
+}
