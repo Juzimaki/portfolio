@@ -241,3 +241,65 @@ body.gallery-page .gallery > h1 {
   color: inherit; /* keeps the same color */
   font-family: Papyrus, fantasy; /* same font as before */
 }
+/* Contact Section Layout */
+.contact-layout {
+  display: flex;
+  justify-content: center; /* centers the whole block */
+  align-items: center; /* vertical alignment */
+  gap: 40px; /* space between text and image */
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+  flex-wrap: wrap; /* allow wrapping for small screens */
+}
+
+.contact-text {
+  flex: 1;
+  text-align: left;
+  min-width: 250px;
+  max-width: 500px; /* keeps text column narrower */
+}
+
+.contact-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.contact-text p {
+  font-size: 1rem;
+  line-height: 1.7; /* more breathing space between lines */
+  margin-bottom: 20px;
+}
+
+.contact-image img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px; /* optional: rounded corners */
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .contact-layout {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-text {
+    text-align: center;
+    margin-bottom: 20px;
+    max-width: 90%; /* expand a bit on small screens */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-text p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
